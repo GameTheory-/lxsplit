@@ -1,0 +1,69 @@
+
+lxSplit for Unix (Linux, BSD, ...) version 0.2.4
+
+http://lxsplit.sourceforge.net/
+http://sourceforge.net/projects/lxsplit/
+
+------------------------------------------------------------------------
+
+This utility is used to split up huge files into smaller pieces without
+compression.  It can be used to join the splitted pieces back into the
+original file.  LXSplit is fully compatible with HJSplit which is a free
+tool available for other operating systems (see http://www.freebyte.com)
+
+Installation is easy, just run:
+ make
+ make install
+
+The program will be installed as "lxsplit" in /usr/local/bin by default.
+If you wish to install it elsewhere, edit the Makefile, and change the
+'INSTALL_PATH'.
+
+LXSplit splits and merges files with the -s and -j flags respectively.
+Starting with version 0.2.1, LXSplit can handle large files (>= 4 GB)
+both when splitting and joining.
+
+Example:
+To split a big file into smaller pieces of 15 MB each, run the following
+command:
+
+ > lxsplit -s hugefile.bin 15M
+
+Output size can be given in (M)egabytes, (k)ilobytes and (b)ytes.
+
+To merge (join) the already split pieces into the original big file, run
+this command:
+
+ > lxsplit -j smallfiles.bin.001
+
+All resulting files (from either splitting or joining) will be placed in
+the current directory.
+
+------------------------------------------------------------------------
+
+If there are any problems with this software, or if you have suggestions
+or patches, visit the project page at our sourceforge.net address above:
+use the forums and the tracker system to get help and / or to make a bug
+report or submit a patch.
+
+------------------------------------------------------------------------
+
+LICENSE:  This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License as published
+by the Free Software Foundation; either version 2 of the License, or (at
+your option) any later version.  See the GNU General Public License for
+more details.
+
+------------------------------------------------------------------------
+
+Original author:
+Richard Stellingwerff <remenic@gmail.com>
+homepage:  http://www.stellingwerff.com/
+
+Maintained by:
+O. Sezer <sezero@users.sourceforge.net>
+
+------------------------------------------------------------------------
+
+$Id: README,v 1.12 2008/10/03 12:09:04 sezero Exp $
+
